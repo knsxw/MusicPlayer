@@ -1,8 +1,16 @@
 package musicplayer;
 
+import com.mongodb.client.MongoCollection;
+import static com.mongodb.client.model.Filters.eq;
 import javax.swing.JOptionPane;
+import org.bson.Document;
 public class LoginForm extends javax.swing.JFrame {
     
+    private MongoCollection<org.bson.Document> users;
+    public LoginForm(MongoCollection<org.bson.Document> users) {
+        initComponents();
+        this.users = users;
+    }
     
     public LoginForm() {
         initComponents();        
@@ -178,7 +186,10 @@ public class LoginForm extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         String username = textField.getText();
         String password = passwordField.getText();
-        if (username.equals("admin") && password.equals("admin")) {
+        Document result = users.find(eq("username",username)).first();
+        if (result == null) {
+            JOptionPane.showMessageDialog(null,"User doesn't exist!!!","Try Again",JOptionPane.PLAIN_MESSAGE);
+        } else if (password.equals(result.getString("password"))) {
             this.setVisible(false);
             MainDashBoard dashboard = new MainDashBoard();
             dashboard.setVisible(true);
@@ -189,7 +200,7 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
         this.setVisible(false);
-        SignUpForm signUpPage = new SignUpForm();
+        SignUpForm signUpPage = new SignUpForm(users);
         signUpPage.setVisible(true);
         signUpPage.setLocationRelativeTo(this);
     }//GEN-LAST:event_signUpButtonActionPerformed
