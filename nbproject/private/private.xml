@@ -5,8 +5,12 @@
         <group>
             <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/musicplayer/MusicPlayer.java</file>
             <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/PanelCover.java</file>
+            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/ItemMenu.java</file>
             <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/musicplayer/MainDashBoard.java</file>
-            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/musicplayer/SignUpForm.java</file>
+            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/DPanel.java</file>
+            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/Menu.java</file>
+            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/DList.java</file>
+            <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/component/ModelMenu.java</file>
             <file>file:/Users/sasori/NetBeansProjects/MusicPlayer/src/musicplayer/LoginForm.java</file>
         </group>
     </open-files>
