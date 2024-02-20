@@ -3,6 +3,7 @@ package musicplayer;
 
 import component.ModelMenu;
 import java.awt.Color;
+import javax.swing.JScrollBar;
 
 public class MainDashBoard extends javax.swing.JFrame {
 
@@ -13,6 +14,7 @@ public class MainDashBoard extends javax.swing.JFrame {
     }
     
     private void init() {
+        sPane.setHorizontalScrollBar(new JScrollBar());
         setBackground(new Color(0,0,0,0));
         dList1.addItem(new ModelMenu("Playlist", "playlist"));
         dList1.addItem(new ModelMenu("Artists", "artists"));
@@ -36,6 +38,8 @@ public class MainDashBoard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         dList2 = new component.DList<>();
         jPanel1 = new javax.swing.JPanel();
+        sPane = new javax.swing.JScrollPane();
+        formArtists2 = new musicplayer.FormArtists();
         dButtom2 = new component.DButtom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,18 +115,26 @@ public class MainDashBoard extends javax.swing.JFrame {
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
+        sPane.setBorder(null);
+        sPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        sPane.setOpaque(false);
+        sPane.setViewportView(formArtists2);
+
         javax.swing.GroupLayout dPanel2Layout = new javax.swing.GroupLayout(dPanel2);
         dPanel2.setLayout(dPanel2Layout);
         dPanel2Layout.setHorizontalGroup(
             dPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dPanel2Layout.createSequentialGroup()
                 .addComponent(menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 850, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(sPane, javax.swing.GroupLayout.PREFERRED_SIZE, 852, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         dPanel2Layout.setVerticalGroup(
             dPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dPanel2Layout.createSequentialGroup()
-                .addComponent(menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(dPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sPane, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -184,9 +196,11 @@ public class MainDashBoard extends javax.swing.JFrame {
     private component.DList<String> dList1;
     private component.DList<String> dList2;
     private component.DPanel dPanel2;
+    private musicplayer.FormArtists formArtists2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private component.Menu menu2;
+    private javax.swing.JScrollPane sPane;
     // End of variables declaration//GEN-END:variables
 }
