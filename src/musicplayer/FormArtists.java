@@ -1,22 +1,31 @@
 
 package musicplayer;
 
+import component.ModelPopular;
+import javax.swing.ImageIcon;
+
 
 public class FormArtists extends javax.swing.JPanel {
 
     
     public FormArtists() {
         initComponents();
+        init();
     }
 
-    
+    private void init() {
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/avicii.png")),"Avicii True Stories", "15 Albums | 17.5M Followers"));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/kygo.png")),"Kygo and Alan Walker", "15 Albums | 17.5M Followers"));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/ed-sheeran.jpg")),"Ed Sheeran", "15 Albums | 17.5M Follower"));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/sigala.jpg")),"Sigala", "15 Albums | 17.5M Follower"));
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        mostPopular1 = new component.MostPopular();
+        mostPopular = new component.MostPopular();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -37,7 +46,7 @@ public class FormArtists extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1)
-                    .addComponent(mostPopular1, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mostPopular, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
@@ -48,7 +57,7 @@ public class FormArtists extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mostPopular1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mostPopular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(261, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -57,6 +66,6 @@ public class FormArtists extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private component.MostPopular mostPopular1;
+    private component.MostPopular mostPopular;
     // End of variables declaration//GEN-END:variables
 }

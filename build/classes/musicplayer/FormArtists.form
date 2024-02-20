@@ -26,7 +26,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="mostPopular1" min="-2" pref="798" max="-2" attributes="0"/>
+                  <Component id="mostPopular" min="-2" pref="798" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
@@ -40,7 +40,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="mostPopular1" min="-2" max="-2" attributes="0"/>
+              <Component id="mostPopular" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="261" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -69,7 +69,7 @@
         <Property name="text" type="java.lang.String" value="Most Popular"/>
       </Properties>
     </Component>
-    <Component class="component.MostPopular" name="mostPopular1">
+    <Component class="component.MostPopular" name="mostPopular">
     </Component>
   </SubComponents>
 </Form>
