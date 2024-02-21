@@ -16,8 +16,8 @@ public class FormArtists extends javax.swing.JPanel {
     private void init() {
         mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/avicii.png")),"Avicii True Stories", "15 Albums | 17.5M Followers"));
         mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/kygo.png")),"Kygo and Alan Walker", "15 Albums | 17.5M Followers"));
-        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/ed-sheeran.jpg")),"Ed Sheeran", "15 Albums | 17.5M Follower"));
-        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/sigala.jpg")),"Sigala", "15 Albums | 17.5M Follower"));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/ed-sheeran.jpg")),"Ed Sheeran", "15 Albums | 17.5M Followers"));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/icons/test/sigala.jpg")),"Sigala", "15 Albums | 17.5M Followers"));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
