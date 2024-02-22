@@ -25,7 +25,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="dPanel2" max="32767" attributes="0"/>
-          <Component id="dButtom2" alignment="0" max="32767" attributes="0"/>
+          <Component id="dButtom1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -34,8 +34,7 @@
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="dPanel2" min="-2" pref="497" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="dButtom2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="dButtom1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -193,20 +192,7 @@
         </Container>
       </SubComponents>
     </Container>
-    <Container class="component.DButtom" name="dButtom2">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
+    <Component class="component.DButtom" name="dButtom1">
+    </Component>
   </SubComponents>
 </Form>

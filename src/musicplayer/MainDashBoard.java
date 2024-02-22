@@ -40,7 +40,7 @@ public class MainDashBoard extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         sPane = new javax.swing.JScrollPane();
         formArtists2 = new musicplayer.FormArtists();
-        dButtom2 = new component.DButtom();
+        dButtom1 = new component.DButtom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -137,23 +137,12 @@ public class MainDashBoard extends javax.swing.JFrame {
                 .addGap(48, 48, 48))
         );
 
-        javax.swing.GroupLayout dButtom2Layout = new javax.swing.GroupLayout(dButtom2);
-        dButtom2.setLayout(dButtom2Layout);
-        dButtom2Layout.setHorizontalGroup(
-            dButtom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        dButtom2Layout.setVerticalGroup(
-            dButtom2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 74, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(dPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(dButtom2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dButtom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,8 +150,7 @@ public class MainDashBoard extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(dPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(dButtom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(dButtom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -191,7 +179,7 @@ public class MainDashBoard extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private component.DButtom dButtom2;
+    private component.DButtom dButtom1;
     private component.DList<String> dList1;
     private component.DList<String> dList2;
     private component.DPanel dPanel2;
