@@ -35,6 +35,7 @@ public class Music extends javax.swing.JPanel {
     private String path;
     public static boolean isPlaying = false;
     public static Player player;
+    public static Thread thread;
     
     private void init() {
         
@@ -56,6 +57,10 @@ public class Music extends javax.swing.JPanel {
                     repaint();
                     Document selectedSong = (Document) songList.get(ListMusic.playIndex);
                     System.out.println(selectedSong.getString("song_url"));
+                    if (isPlaying){
+                        player.close();
+                        isPlaying = false;
+                    }
                     new Thread() {
                         @Override
                         public void run() {
@@ -67,8 +72,9 @@ public class Music extends javax.swing.JPanel {
                                 path = downloadSong(selectedSong.getString("song_url"),ListMusic.playIndex +".mp3");
                             }
                             System.out.println(path);
+                            System.out.println("playing");
                             playSong(path);
-                            System.out.println("play");
+                            System.out.println("finished");
                             } catch (IOException | JavaLayerException ex) {
                             Logger.getLogger(Music.class.getName()).log(Level.SEVERE, null, ex);
                             }
@@ -112,8 +118,8 @@ public class Music extends javax.swing.JPanel {
         FileInputStream fis = new FileInputStream(filepath);
         BufferedInputStream bis = new BufferedInputStream(fis);
         player = new Player(bis);
-        player.play();
         isPlaying = true;
+        player.play();
     }
     
     @SuppressWarnings("unchecked")

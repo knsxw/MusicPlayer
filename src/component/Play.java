@@ -1,11 +1,8 @@
 
 package component;
 
-import static component.Music.isPlaying;
 import static component.Music.player;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javazoom.jl.decoder.JavaLayerException;
+
 
 
 public class Play extends javax.swing.JPanel {
